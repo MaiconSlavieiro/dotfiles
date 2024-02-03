@@ -2,7 +2,7 @@
 @define-color warning #f3f809;  /* warning color */
 @define-color fgcolor #ffffff;  /* foreground color */
 @define-color bgcolor #303030;  /* background color */
-@define-color bgcolor #222436;  /* background color */
+@define-color bgcolor2 #222436;  /* background color */
 @define-color alert   #df3320;
 
 @define-color accent1 #ff7a93;
@@ -12,67 +12,72 @@
 @define-color accent5 #7da6ff;
 @define-color accent6 #0db9d7;
 
+@define-color alphabgcolor rgba(0, 0, 0, 0.3);
+
 /* ---- 💫 https://github.com/JaKooLit 💫 ---- */
 /* Translucent */
 
 * {
-font-family: "JetBrainsMono Nerd Font";
-font-weight: bold;
-min-height: 0;
-/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
-font-size: 97%;
-font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
-padding: 1px;
+  font-family: "Roboto", "Symbols Nerd Font";
+  font-weight: normal;
+  min-height: 0;
+  /* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
+  font-size: 97%;
+  font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+  padding: 1px;
 }
 
 window#waybar {
-    background-color: rgba(0,0,0,0.3);
-    color: #ffffff;
-    transition-property: background-color;
-    transition-duration: .5s;
-    border-radius: 10px;
+  background-color: @alphabgcolor;
+  color: #ffffff;
+  transition-property: background-color;
+  transition-duration: .5s;
+  border-radius: 10px;
 }
 
 window#waybar.hidden {
-    opacity: 0.1;
+  opacity: 0.1;
 }
 
 window#waybar.empty {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 window#waybar.empty #window {
-    padding: 0px;
-    border: 0px;
-    /*  background-color: rgba(66,66,66,0.5); */ /* transparent */
-    background-color: transparent;
+  padding: 0px;
+  border: 0px;
+  /*  background-color: rgba(66,66,66,0.5); */ /* transparent */
+  background-color: transparent;
 }
 
 tooltip {
-    background: #1e1e2e;
-    opacity: 0.8;
-    border-radius: 10px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #11111b;
+  background: #1e1e2e;
+  opacity: 0.8;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #11111b;
 }
 
-tooltip label{
-    color: #cdd6f4;
+tooltip label {
+  color: #cdd6f4;
 }
 
 #workspaces button {
-    background-color: transparent;
-    color: #ffffff;
-    box-shadow: none;
-	text-shadow: none;
-    padding: 0px;
-    border-radius: 9px;
-    padding-left: 4px;
-    padding-right: 4px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+  background-color: transparent;
+  color: #ffffff;
+  box-shadow: none;
+  text-shadow: none;
+  padding: 0px;
+  border-radius: 9px;
+  padding-left: 4px;
+  padding-right: 4px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
 }
+
+/* ... Restante do código permanece inalterado ... */
+
 
 #workspaces button.active {
     background-color: transparent;
